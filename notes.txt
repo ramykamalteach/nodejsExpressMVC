@@ -18,4 +18,5 @@ at index.js :
                 console.log("server start at port " + port);
             });
 
+server works at http://localhost:3000/
 -------------------------------------------------------------------------
