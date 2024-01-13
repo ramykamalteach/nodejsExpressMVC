@@ -66,5 +66,12 @@ to write a passed paramerter :
 
 --- vs code extension : EJS language support
 
+******* send variables and arrays to EJS view
+******* javascript code in ejs (foreach, if) : 
+            <% javascript code %>
+
+-------------------------------------------------------------------------
+
+
 
 
