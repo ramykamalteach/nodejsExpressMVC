@@ -72,6 +72,8 @@ to write a passed paramerter :
 
 -------------------------------------------------------------------------
 
+phase 004 : public folder
 
+    for static files: img, css, font, js, ...........
 
 

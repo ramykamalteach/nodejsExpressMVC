@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+/* ------------- public folder ---------------- */
+app.use(express.static(__dirname + '/public'));
 /* ------------- view engine ------------------ */
 app.set('view engine', 'ejs');
 /* -------------- page ------------------------ */
