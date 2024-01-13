@@ -40,4 +40,31 @@ in index.js add :
 
 ------------------------------------------------------------
 
+phase 003 - EJS as a (view engine)
+
+- > npm i ejs -g
+
+in index.js add :
+        /* ------------- view engine ------------------ */
+        app.set('view engine', 'ejs');
+
+        /* -------------- page ------------------------ */
+        app.get('/', (req, res) => {
+            res.render('home');
+        });
+
+in "views" folder add files *.ejs : home.ejs
+********* ejs file similar to html
+
+in "views" folder add two folder : "pages", "partials"
+
+to include partial in page or partial with passed paramerters :
+        <%- include('../partials/siteHeader', {pageTitle: "Home Page"}) %>
+
+to write a passed paramerter :
+        <%= pageTitle %>
+
+
+
+
 

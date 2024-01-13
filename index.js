@@ -2,14 +2,17 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+/* ------------- view engine ------------------ */
+app.set('view engine', 'ejs');
+/* -------------- page ------------------------ */
 app.get('/', (req, res) => {
-    res.send("welcome to our Home page");
+    res.render('pages/home');
 });
 app.get('/about', (req, res) => {
-    res.send("About our Company");
+    res.render('pages/about');
 });
-app.get('/x', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/contacts.html'));
+app.get('/contacts', (req, res) => {
+    res.render('pages/contacts');
 });
 
 port = 3000;
