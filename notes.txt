@@ -64,7 +64,7 @@ to include partial in page or partial with passed paramerters :
 to write a passed paramerter :
         <%= pageTitle %>
 
-
+--- vs code extension : EJS language support
 
 
 
