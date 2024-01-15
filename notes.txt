@@ -89,4 +89,24 @@ phase 005 : dotenv file
     - in index.js apply dotenv : require('dotenv').config();
     - in index.js get attribute : port = process.env.PORT;
 
-    
+-------------------------------------------------------------------------
+phase 006 : Router
+
+    - add /route/web.js    as a router file
+    - move req,res functions from index.js to web.js
+    - in index.js make webRouter object the express router :
+        const webRouter = require('./route/web');
+        app.use(webRouter);
+    - in web.js make the express router object :
+        const express = require('express');
+        const webRouter = express.Router();
+    - in web.js make route roles with webRouter object:
+        webRouter.get('/about', (req, res) => {
+            res.render('pages/about');
+        });
+    - in web.js export webRouter :
+        module.exports = webRouter;
+
+------------------------------------------------------------------
+
+
