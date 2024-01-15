@@ -3,7 +3,7 @@ const webRouter = express.Router();
 
 /* ------------- controllers ------------------- */
 const staffController = require('../controllers/staffController');
-const dishController = require('../controllers/dishController');
+const {dishController} = require('../controllers/dishController');
 /* -------------- route roles ------------------------ */
 webRouter.get('/', (req, res) => {
     res.render('pages/home');
@@ -22,12 +22,11 @@ webRouter.get('/staff', (req, res) => {
 
 webRouter.get('/dishes', async (req, res) => {
     try {
-        webRouter.get('/dishes', await dishController(req, res));
+        await dishController(req, res);
     }
     catch (error) {
-        // throw error;
+        throw error;
     }
-    
 });
 
 // add more route roles

@@ -13,4 +13,6 @@ const dishController = async (req, res) => {
 
 }
 
-module.exports = dishController;
+module.exports = {
+    dishController
+};
