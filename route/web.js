@@ -1,7 +1,10 @@
 const express = require('express');
 const webRouter = express.Router();
 
-/* -------------- page ------------------------ */
+/* ------------- controllers ------------------- */
+const staffController = require('../controllers/staffController');
+
+/* -------------- route roles ------------------------ */
 webRouter.get('/', (req, res) => {
     res.render('pages/home');
 });
@@ -13,18 +16,7 @@ webRouter.get('/contacts', (req, res) => {
 });
 
 webRouter.get('/staff', (req, res) => {
-    var staffTitle = "Mean Full Stack Staff";
-    var staffCount = 15;
-    var emps = [
-        { name: "Ali Reda", job: "frontend" },
-        { name: "Waleed Mohammed", job: "backtend", address: "mansoura" },
-        { name: "FAthy Farouk", job: "AI-dev" },
-    ];
-    res.render('pages/staff', {
-        depName: staffTitle,
-        staffCount: staffCount,
-        emps: emps
-    });
+    webRouter.get('/staff', staffController(req, res));
 });
 
 // add more route roles

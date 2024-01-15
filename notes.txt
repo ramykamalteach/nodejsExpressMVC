@@ -109,4 +109,14 @@ phase 006 : Router
 
 ------------------------------------------------------------------
 
+phase 007 : Controller (buisness logic/layer)
 
+    - create "controllers" folder
+    - add in it controller files
+    - in router file add controller :
+        const staffController = require('../controllers/staffController');
+    - in router file apply controller in specific "route role" :
+        webRouter.get('/staff', staffController(req, res));
+
+-------------------------------------------------------------------
+    
