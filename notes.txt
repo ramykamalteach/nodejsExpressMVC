@@ -76,4 +76,17 @@ phase 004 : public folder
 
     for static files: img, css, font, js, ...........
 
+    in index.js
+        app.use(express.static(__dirname + '/public'));
 
+-------------------------------------------------------------------------
+
+phase 005 : dotenv file
+
+    - > npm i dotenv
+    - in root folder create file : .env
+    - in .env file add attributes like : PORT=3000
+    - in index.js apply dotenv : require('dotenv').config();
+    - in index.js get attribute : port = process.env.PORT;
+
+    
