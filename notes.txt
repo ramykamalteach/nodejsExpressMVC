@@ -119,4 +119,12 @@ phase 007 : Controller (buisness logic/layer)
         webRouter.get('/staff', staffController(req, res));
 
 -------------------------------------------------------------------
-    
+
+phase 008 : Model (deals with database)
+
+    - create "models" folder
+    - add in it model files
+    - in a controller add the model :
+        const staffModel = require('../models/staffModel');
+    - in model file write code to get data ......... database, json, ...
+
