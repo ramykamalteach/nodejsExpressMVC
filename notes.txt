@@ -128,3 +128,15 @@ phase 008 : Model (deals with database)
         const staffModel = require('../models/staffModel');
     - in model file write code to get data ......... database, json, ...
 
+-------------------------------------------------------------------
+
+phase 009 : Try Application
+
+    - create database
+    - add static files in "public" : images, css, js, fonts, ...
+    
+    - view static
+    - route role
+    - controller
+    - model
+    - view dynamic
